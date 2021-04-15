@@ -23,7 +23,7 @@ require('./src/connection/connection');
 var app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// app.use("/public/photo", express.static(path.join('/Users/pro/ProjectAndroid/android_server/webadmin/public/uploads')));
+app.use("/public/photo", express.static(path.join('/Users/pro/ProjectAndroid/android_server/webadmin/public/uploads')));
 app.use("/public/photo", express.static("public/uploads"));
 
 

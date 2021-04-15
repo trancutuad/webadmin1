@@ -26,7 +26,7 @@ var GiftsSchema = new mongoose.Schema({
     },
     // expiration_at: {
     //     type: String
-    // }
+    // },
     // delete_at:{
     //     type: Date
     // },

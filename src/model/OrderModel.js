@@ -7,7 +7,6 @@ var OrdersSchema = new mongoose.Schema({
         unique: true,
     },
     totalAmount: {
-        unique: true,
         type: String,
         required: true,
     },

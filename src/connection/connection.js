@@ -1,7 +1,9 @@
 var mongoose = require('mongoose');
 
 // We need to difine the URL
-var URL = 'mongodb+srv://vnfood:vnfood@cluster0-amioj.mongodb.net/vnfood?retryWrites=true&w=majority';
+//mongodb+srv://Tu123456:Tuan123456@cluster0.ezh7x.mongodb.net/qlbh?retryWrites=true&w=majority
+//mongodb+srv://vnfood:vnfood@cluster0-amioj.mongodb.net/vnfood?retryWrites=true&w=majority
+var URL = 'mongodb+srv://Tu123456:Tuan123456@cluster0.ezh7x.mongodb.net/qlbh?retryWrites=true&w=majority';
 
 mongoose.set('useFindAndModify', false);
 

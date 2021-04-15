@@ -26,12 +26,15 @@ exports.addOrder = function (req, response, next) {
     Orders.create(order, (err, res) => {
         if(err){
             response.status(401).json({statusCode: 401, data: "Có lỗi xảy ra !!!"})
+            console.log("4011")
         }else{
             orderService.createOrderDetails(orderDetailsReq, (err, res1) => {
                 if(err){
                     response.status(401).json({statusCode: 401, data: "Có lỗi xảy ra !!!"})
+                    console.log("401")
                 }else{
                     response.status(200).json({statusCode: 200, data: "Đặt hàng thành công !!!"})
+                    console.log("200")
                 }
             })
         }
@@ -45,7 +48,7 @@ exports.addGift = (req, res, next) => {
 
     orderService.createGift(gift, (err, data) => {
         if (err) {
-            res.status(401).send({statusCode: res.statusCode, err: 'Có lỗi xảy ra! ' + err})
+            res.status(4011).send({statusCode: res.statusCode, err: 'Có lỗi xảy ra! ' + err})
         }
         res.status(200).send({statusCode: res.statusCode, data: data})
 
@@ -55,7 +58,7 @@ exports.checkGift = (req, res, next) => {
 
     orderService.checkGift(req.params.id, (err, data) => {
         if (err) {
-            res.status(401).send({statusCode: res.statusCode, err: 'Có lỗi xảy ra! ' + err})
+            res.status(4011).send({statusCode: res.statusCode, err: 'Có lỗi xảy ra! ' + err})
         }
         if (!data) {
             res.status(404).send({statusCode: res.statusCode, err: 'Mã khuyến mãi không tồn tại!'})

@@ -11,6 +11,7 @@ const Passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
 const uuid = require('uuid');
+const GiftsModel = require('../model/GiftModel');
 
 
 router.use(
@@ -151,7 +152,7 @@ exports.getAllGift = function (req, res) {
 
 };
 exports.addGift = (req, res) => {
-
+    let gift = new GiftsModel(req,body) 
 }
 exports.deleteGift = function (request, response) {
     gift.deleteOne({_id: request.params.id}, (err, doc) => {
